@@ -1,0 +1,164 @@
+/* تصفير الهوامش وتحديد الخط */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* خلفية الصفحة الوردية المتدرجة */
+body {
+    background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #ffd1dc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* الحاوية الرئيسية التي تجمع الصورة ولوحة الأرقام */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px; /* المسافة بين الصورة والأرقام */
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+/* --- القسم الأيسر (الصورة) --- */
+.left-section {
+    position: relative;
+}
+
+/* إطار الصورة الأبيض المائل */
+.photo-card {
+    background: white;
+    padding: 20px 20px 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transform: rotate(-3deg); /* ميلان بسيط */
+    position: relative;
+    text-align: center;
+    width: 350px;
+}
+
+/* الشريطة الوردية أعلى الصورة */
+.bow-icon {
+    position: absolute;
+    top: -165px;       /* تطلع لفوق شوي */
+    right: -85px;     /* تطلع لبرا عاليمين شوي */
+    width: 220px;     /* حجمها (كبره أو صغره حسب ما تحب) */
+    z-index: 30;      /* تضمن إنها تطلع فوق الصورة */
+}
+
+/* صورة الرسم (الولد والبنت) */
+.couple-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* النص الموجود أسفل الصورة */
+.caption {
+    margin-top: 15px;
+    color: #ff6b81;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* الدببة أسفل يسار الصورة */
+.teddy-img {
+    position: absolute;
+    bottom: -40px;
+    left: -50px;
+    width: 140px;
+}
+
+/* --- القسم الأيمن (لوحة الأرقام) --- */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* كلمة Enter a passcode */
+h2 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* مربعات إدخال الأرقام */
+.passcode-display {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.passcode-display input {
+    width: 55px;
+    height: 65px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    outline: none;
+}
+
+/* لوحة المفاتيح (الأزرار) */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* شكل الأزرار الدائرية */
+.keypad button {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    color: #ff6b81;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.5);
+    transition: 0.2s;
+}
+
+/* تأثير عند الضغط على الزر */
+.keypad button:active {
+    transform: scale(0.9);
+    background: #ffe6ea;
+}
+
+/* زر NEXT */
+.next-btn {
+    background: white;
+    color: #ff6b81;
+    border: none;
+    padding: 15px 60px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* تأثير عند تمرير الماوس على زر NEXT */
+.next-btn:hover {
+    background: #ff6b81;
+    color: white;
+    transform: translateY(-3px);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Passcode</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- القسم الأيسر: الصورة -->
+        <div class="left-section">
+            <div class="photo-card">
+                <!-- الشريطة الوردية -->
+                <img src="bow.png" alt="Bow" class="bow-icon">  
+                <!-- صورة الرسم (الولد والبنت) -->
+                <img src="couple.png" alt="Couple" class="couple-img">
+                <p class="caption">the cutest girl ever 🌺</p>
+            </div>
+            <!-- صور الدببة -->
+            <img src="teddy.png" alt="Teddy" class="teddy-img">
+        </div>
+
+        <!-- القسم الأيمن: لوحة الأرقام -->
+        <div class="right-section">
+            <h2>Enter a passcode</h2>
+            
+            <!-- المربعات التي تظهر فيها الأرقام -->
+            <div class="passcode-display">
+                <input type="text" readonly value="">
+                <input type="text" readonly value="">
+                <input type="text" readonly value="">
+                <input type="text" readonly value="">
+            </div>
+
+            <!-- أزرار الأرقام -->
+            <div class="keypad">
+                <button onclick="addNumber(1)">1</button>
+                <button onclick="addNumber(2)">2</button>
+                <button onclick="addNumber(3)">3</button>
+                <button onclick="addNumber(4)">4</button>
+                <button onclick="addNumber(5)">5</button>
+                <button onclick="addNumber(6)">6</button>
+                <button onclick="addNumber(7)">7</button>
+                <button onclick="addNumber(8)">8</button>
+                <button onclick="addNumber(9)">9</button>
+                <button onclick="addNumber('*')">*</button>
+                <button onclick="addNumber(0)">0</button>
+                <button onclick="deleteNumber()">⌫</button>
+            </div>
+
+            <!-- زر الانتقال للصفحة الثانية -->
+            <button class="next-btn" onclick="goToNextPage()">NEXT</button>
+        </div>
+
+    </div>
+
+    <!-- ربط ملف الجافاسكريبت -->
+    <script src="script.js"></script>
+</body>
+</html>

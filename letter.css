@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* خلفية خشب أو لون غامق يبرز الورقة القديمة */
+    background-color: #8b7355; 
+    background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Aref Ruqaa', serif; /* الخط العربي القديم */
+}
+
+.old-paper {
+    background-color: #fdf5e6; /* لون الورق القديم (أصفر فاتح) */
+    width: 90%;
+    max-width: 600px;
+    padding: 50px;
+    border-radius: 5px;
+    /* ظل قوي يعطي إحساس إن الورقة مرتفعة */
+    box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.5);
+    /* حواف الورقة المحروقة أو القديمة */
+    border: 1px solid #d3c5a3;
+    /* خطوط خفيفة في الخلفية كأنها ورق مسطر */
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 39px,
+        #e0d4bc 40px
+    );
+    background-position: 0 50px;
+    position: relative;
+}
+
+/* تأثير بقع الزمن على الورقة */
+.old-paper::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.old-paper h1 {
+    color: #5c3a21; /* لون بني غامق للحبر */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.old-paper p {
+    color: #3e2723;
+    font-size: 22px;
+    line-height: 40px; /* يتوافق مع الخطوط اللي في الخلفية */
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.signature {
+    margin-top: 40px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px !important;
+    color: #b71c1c !important; /* لون حبر أحمر */
+}
